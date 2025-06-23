@@ -21,7 +21,7 @@ export default async function handler(request, response) {
     // --- My Super-Genius Prompt Engineering for NYC BizPermit Navigator ---
     const prompt = `
     Act as an expert in New York City small business permits and licenses for a new entrepreneur.
-    The user wants to start a "<span class="math-inline">\{businessType\}" business, described as "</span>{specificDetails}", located in "${borough}" borough of NYC.
+    The user is starting a ${businessType.toLowerCase().includes('other') ? 'business' : `"${businessType}" business`} located in "${borough}" borough of NYC, specifically described as "${specificDetails}".
 
     Your task is to provide a comprehensive, actionable, and simplified checklist for *initial* business registration, permits, and licenses required at the City, State, and relevant Federal levels for this specific type of small business in NYC.
 
