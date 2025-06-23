@@ -9,42 +9,76 @@
     <meta property="og:url" content="YOUR_VERCEL_URL">
     <meta property="og:title" content="NYC BizPermit Navigator - Your Business, Simplified by AI">
     <meta property="og:description" content="Get a personalized, step-by-step checklist for permits, licenses, and compliance to start your small business in New York City. Simplified by AI.">
-    <meta property="og:image" content="https://nyc-bizpermit-navigator-yourusername.vercel.app/social-share-image.png"> <meta property="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://nyc-bizpermit-navigator-yourusername.vercel.app/social-share-image.png"> 
+    <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="YOUR_VERCEL_URL">
     <meta property="twitter:title" content="NYC BizPermit Navigator - Your Business, Simplified by AI">
     <meta property="twitter:description" content="Get a personalized, step-by-step checklist for permits, licenses, and compliance to start your small business in New York City. Simplified by AI.">
-    <meta property="twitter:image" content="https://nyc-bizpermit-navigator-yourusername.vercel.app/social-share-image.png"> ```
+    <meta property="twitter:image" content="https://nyc-bizpermit-navigator-yourusername.vercel.app/social-share-image.png"> 
     
     <title>NYC BizPermit Navigator - Your Business, Simplified</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-primary: #121212;
+            --bg-secondary: #1e1e1e;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent: #4a90e2;
+            --accent-hover: #3a7bc8;
+            --success: #28a745;
+            --border: #333;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
         }
+        
         .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 40px auto;
+            background-color: var(--bg-secondary);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 2rem auto;
+            border: 1px solid var(--border);
         }
+        
         h1 {
-            color: #0056b3;
+            color: var(--accent);
             text-align: center;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-size: 2.2rem;
+            background: linear-gradient(90deg, var(--accent), #8a2be2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+        
         p {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
+        
         .call-to-action {
             text-align: center;
-            margin-top: 30px;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #28a745;
+            margin: 2.5rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--accent);
+            padding: 1rem;
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            background-color: rgba(74, 144, 226, 0.1);
         }
     </style>
 </head>
@@ -107,86 +141,302 @@
 <style>
     .feedback-button {
         display: inline-block;
-        padding: 10px 20px;
-        background-color: #28a745; /* Green button */
+        padding: 0.8rem 1.8rem;
+        background: linear-gradient(135deg, var(--success), #1e7e34);
         color: white;
         text-decoration: none;
-        border-radius: 5px;
-        font-size: 1em;
-        transition: background-color 0.3s ease;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
+    
     .feedback-button:hover {
-        background-color: #218838;
+        background: linear-gradient(135deg, #218838, #1c7430);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    }
+    
+    .feedback-button:active {
+        transform: translateY(0);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
 </style>
 
 
         <style>
-            /* Add some basic styling for the new elements */
+            /* Styling for the input section */
             .input-section {
-                margin-top: 30px;
-                border: 1px solid #ddd;
-                padding: 20px;
-                border-radius: 8px;
-                background-color: #f9f9f9;
+                margin-top: 2rem;
+                border: 1px solid var(--border);
+                padding: 1.8rem;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.03);
+                transition: all 0.3s ease;
             }
+            
+            .input-section:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .input-section h2 {
+                color: var(--accent);
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+                font-size: 1.5rem;
+                text-align: left;
+            }
+            
             .input-section label {
                 display: block;
-                margin-bottom: 8px;
-                font-weight: bold;
-                color: #555;
+                margin: 1.2rem 0 0.6rem;
+                font-weight: 500;
+                color: var(--text-primary);
+                font-size: 0.95rem;
             }
+            
             .input-section select,
             .input-section textarea {
-                width: calc(100% - 20px); /* Adjust for padding */
-                padding: 10px;
-                margin-bottom: 15px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                box-sizing: border-box; /* Include padding in width calculation */
+                width: 100%;
+                padding: 0.8rem 1rem;
+                margin-bottom: 1.2rem;
+                border: 1px solid var(--border);
+                border-radius: 6px;
+                background-color: var(--bg-primary);
+                color: var(--text-primary);
+                font-size: 1rem;
+                transition: all 0.3s ease;
             }
+            
+            .input-section select:focus,
+            .input-section textarea:focus {
+                outline: none;
+                border-color: var(--accent);
+                box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.25);
+            }
+            
+            .input-section textarea {
+                min-height: 100px;
+                resize: vertical;
+            }
+            
             .input-section button {
                 display: block;
                 width: 100%;
-                padding: 12px 20px;
-                background-color: #007bff;
+                padding: 1rem;
+                background: linear-gradient(135deg, var(--accent), #3a7bd5);
                 color: white;
                 border: none;
-                border-radius: 5px;
-                font-size: 1.1em;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            }
-            .input-section button:hover {
-                background-color: #0056b3;
-            }
-            .results-section {
-                margin-top: 40px;
-                border: 1px solid #d4edda; /* Light green border for success */
-                padding: 25px;
                 border-radius: 8px;
-                background-color: #e2f9e7; /* Light green background */
-                display: none; /* Hidden by default, will show with JavaScript */
+                font-size: 1.1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-top: 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
             }
+            
+            .input-section button:hover {
+                background: linear-gradient(135deg, var(--accent-hover), #2c5fa8);
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+            
+            .input-section button:active {
+                transform: translateY(0);
+            }
+            
+            .input-section button:disabled {
+                opacity: 0.7;
+                cursor: not-allowed;
+                transform: none !important;
+            }
+            
+            /* Results section styling */
+            .results-section {
+                margin-top: 2.5rem;
+                border: 1px solid var(--border);
+                padding: 2rem;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.03);
+                display: none;
+                animation: fadeIn 0.5s ease-out;
+            }
+            
             .results-section h2 {
-                color: #28a745; /* Green for success */
+                color: var(--accent);
                 text-align: center;
-                margin-bottom: 20px;
+                margin-bottom: 1.5rem;
+                font-size: 1.8rem;
+                position: relative;
+                padding-bottom: 0.8rem;
             }
+            
+            .results-section h2::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 3px;
+                background: linear-gradient(90deg, var(--accent), transparent);
+                border-radius: 3px;
+            }
+            
+            #checklistOutput {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                color: var(--text-secondary);
+            }
+            
             #checklistOutput ul {
                 list-style-type: none;
                 padding: 0;
+                margin: 0;
             }
+            
             #checklistOutput li {
-                background-color: #f0fff4;
-                margin-bottom: 10px;
-                padding: 12px;
-                border-left: 5px solid #28a745;
-                border-radius: 4px;
-                box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+                background-color: rgba(255, 255, 255, 0.05);
+                margin-bottom: 1rem;
+                padding: 1.2rem 1.5rem 1.2rem 3rem;
+                border-left: 4px solid var(--accent);
+                border-radius: 6px;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
             }
+            
+            #checklistOutput li:hover {
+                transform: translateX(5px);
+                background-color: rgba(255, 255, 255, 0.08);
+            }
+            
+            #checklistOutput li::before {
+                content: '→';
+                position: absolute;
+                left: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--accent);
+                font-weight: bold;
+            }
+            
             #checklistOutput li strong {
-                color: #0056b3;
+                color: var(--accent);
+                font-weight: 600;
+            }
+            
+            #checklistOutput p {
+                text-align: left;
+                margin: 1.5rem 0;
+                color: var(--text-secondary);
+                line-height: 1.7;
+            }
+            
+            /* Loading state */
+            .loading-state {
+                text-align: center;
+                padding: 2rem;
+                color: var(--text-secondary);
+            }
+            
+            .spinner {
+                width: 40px;
+                height: 40px;
+                margin: 0 auto 1rem;
+                border: 4px solid rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                border-top-color: var(--accent);
+                animation: spin 1s ease-in-out infinite;
+            }
+            
+            @keyframes spin {
+                to { transform: rotate(360deg); }
+            }
+            
+            /* Error message styling */
+            .error-message {
+                background-color: rgba(220, 53, 69, 0.1);
+                border-left: 4px solid #dc3545;
+                padding: 1.5rem;
+                border-radius: 6px;
+                margin: 1rem 0;
+            }
+            
+            .error-message p {
+                text-align: left;
+                margin: 0.5rem 0;
+                color: #ff6b6b;
+            }
+            
+            .error-message p:first-child {
+                margin-top: 0;
+            }
+            
+            .error-message p:last-child {
+                margin-bottom: 0;
+                font-size: 0.9em;
+                opacity: 0.9;
+            }
+            
+            /* Checklist content */
+            .checklist-content {
+                animation: fadeIn 0.5s ease-out;
+            }
+            
+            .disclaimer {
+                margin-top: 2rem;
+                padding-top: 1.5rem;
+                border-top: 1px solid var(--border);
+                font-size: 0.9rem;
+                color: var(--text-secondary);
+                opacity: 0.8;
+            }
+            
+            .disclaimer p {
+                text-align: center;
+                margin: 0;
+                line-height: 1.6;
+            }
+            
+            /* Animation for checklist items */
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .container {
+                    padding: 1.5rem;
+                    margin: 1rem;
+                }
+                
+                .input-section {
+                    padding: 1.2rem;
+                }
+                
+                h1 {
+                    font-size: 1.8rem;
+                }
+                
+                .results-section h2 {
+                    font-size: 1.5rem;
+                }
+                
+                #checklistOutput li {
+                    padding: 1rem 1rem 1rem 2.5rem;
+                }
+                
+                #checklistOutput li::before {
+                    left: 0.8rem;
+                }
             }
         </style>
 
@@ -196,6 +446,48 @@
     </div> 
 
 <script>
+    // Function to clean markdown from text
+    function cleanMarkdown(text) {
+        if (!text) return '';
+        
+        // Remove markdown formatting
+        return text
+            // Remove headers (e.g., ## Title -> Title)
+            .replace(/^##?\s+/gm, '')
+            // Remove bold/italic (e.g., **text** -> text)
+            .replace(/\*\*([^*]+)\*\*/g, '$1')
+            .replace(/\*([^*]+)\*/g, '$1')
+            // Remove links (e.g., [text](url) -> text)
+            .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+            // Remove inline code blocks
+            .replace(/`([^`]+)`/g, '$1')
+            // Remove code blocks
+            .replace(/```[\s\S]*?```/g, '')
+            // Clean up multiple newlines
+            .replace(/\n{3,}/g, '\n\n')
+            .trim();
+    }
+
+    // Function to format checklist items
+    function formatChecklist(html) {
+        if (!html) return '';
+        
+        // Convert newlines to <br> and paragraphs
+        let formatted = html
+            .replace(/\n\s*\n/g, '</p><p>')
+            .replace(/\n/g, '<br>');
+            
+        // Ensure proper HTML structure
+        if (!formatted.startsWith('<p>')) {
+            formatted = '<p>' + formatted;
+        }
+        if (!formatted.endsWith('</p>')) {
+            formatted += '</p>';
+        }
+        
+        return formatted;
+    }
+
     document.getElementById('getChecklistBtn').addEventListener('click', async () => {
         const businessType = document.getElementById('businessType').value;
         const specificDetails = document.getElementById('specificDetails').value;
@@ -204,6 +496,7 @@
         const resultsSection = document.querySelector('.results-section');
         const checklistOutput = document.getElementById('checklistOutput');
         const button = document.getElementById('getChecklistBtn');
+        const formContainer = document.querySelector('.input-section');
 
         // Basic validation
         if (!specificDetails.trim()) {
@@ -212,10 +505,24 @@
         }
 
         // Show loading state
-        button.textContent = 'Generating... Please wait!';
+        button.textContent = 'Generating...';
         button.disabled = true;
-        checklistOutput.innerHTML = '<p>Getting your personalized checklist from Ava...</p>';
-        resultsSection.style.display = 'block'; // Show results section
+        formContainer.style.opacity = '0.7';
+        formContainer.style.pointerEvents = 'none';
+        
+        // Create loading animation
+        const loadingHTML = `
+            <div class="loading-state">
+                <div class="spinner"></div>
+                <p>Creating your personalized checklist...</p>
+            </div>
+        `;
+        
+        checklistOutput.innerHTML = loadingHTML;
+        resultsSection.style.display = 'block';
+        
+        // Smooth scroll to results
+        resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
         try {
             const response = await fetch('/api/generate-checklist', {
@@ -223,7 +530,12 @@
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ businessType, specificDetails, borough }),
+                body: JSON.stringify({ 
+                    businessType, 
+                    specificDetails, 
+                    borough,
+                    format: 'clean' // Request clean format from the API if supported
+                }),
             });
 
             if (!response.ok) {
@@ -232,14 +544,46 @@
             }
 
             const data = await response.json();
-            checklistOutput.innerHTML = data.checklist;
+            
+            // Clean and format the response
+            const cleanContent = cleanMarkdown(data.checklist || data.response || data);
+            const formattedContent = formatChecklist(cleanContent);
+            
+            // Display the cleaned and formatted content
+            checklistOutput.innerHTML = `
+                <div class="fade-in">
+                    <div class="checklist-content">
+                        ${formattedContent}
+                    </div>
+                    <div class="disclaimer">
+                        <p>This information is provided as a general guide. For official requirements, please consult with the relevant NYC agencies.</p>
+                    </div>
+                </div>
+            `;
 
         } catch (error) {
             console.error('Error:', error);
-            checklistOutput.innerHTML = `<p style="color: red;">Failed to generate checklist: ${error.message}. Please try again.</p>`;
+            checklistOutput.innerHTML = `
+                <div class="error-message">
+                    <p>❌ Failed to generate checklist. ${error.message}</p>
+                    <p>Please try again or contact support if the issue persists.</p>
+                </div>
+            `;
         } finally {
             button.textContent = 'Get My Checklist!';
             button.disabled = false;
+            formContainer.style.opacity = '1';
+            formContainer.style.pointerEvents = 'auto';
+            
+            // Add smooth fade-in animation for the content
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = 0;
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.5s ease-in-out';
+                    el.style.opacity = 1;
+                }, 50);
+            });
         }
     });
 </script>
