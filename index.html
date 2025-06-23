@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC BizPermit Navigator - Your Business, Simplified</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        h1 {
+            color: #0056b3;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .call-to-action {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NYC BizPermit Navigator</h1>
+        <p>Unlock the secrets to starting your small business in New York City. Get personalized, step-by-step guides for permits, licenses, and compliance.</p>
+        <div class="call-to-action">
+            Your NYC entrepreneurial journey, simplified.
+        </div>
+
+        <div class="input-section">
+            <h2>Get Your Personalized NYC BizPermit Checklist</h2>
+            <label for="businessType">I'm starting a:</label>
+            <select id="businessType" name="businessType">
+                <option value="online-retail">Online/E-commerce Business (Home-based)</option>
+                <option value="service-provider">Freelance/Consulting Service</option>
+                <option value="small-retail">Small Retail Shop (e.g., clothing, crafts)</option>
+                <option value="cafe-restaurant">Small Cafe/Restaurant (Initial Steps)</option>
+                <option value="other">Other (Please specify below)</option>
+            </select>
+            
+            <label for="specificDetails">Briefly describe your business (e.g., "selling handmade jewelry online", "IT consulting from home", "small coffee stand"):</label>
+            <textarea id="specificDetails" placeholder="e.g., selling handmade jewelry online, IT consulting from home, small coffee stand" rows="3"></textarea>
+            
+            <label for="borough">In which NYC Borough?</label>
+            <select id="borough" name="borough">
+                <option value="manhattan">Manhattan</option>
+                <option value="brooklyn">Brooklyn</option>
+                <option value="queens">Queens</option>
+                <option value="bronx">Bronx</option>
+                <option value="staten-island">Staten Island</option>
+            </select>
+            
+            <button id="getChecklistBtn">Get My Checklist!</button>
+        </div>
+
+        <div class="results-section" style="display: none;">
+            <h2>Your Personalized BizPermit Checklist</h2>
+            <div id="checklistOutput">
+                </div>
+        </div>
+
+        <style>
+            /* Add some basic styling for the new elements */
+            .input-section {
+                margin-top: 30px;
+                border: 1px solid #ddd;
+                padding: 20px;
+                border-radius: 8px;
+                background-color: #f9f9f9;
+            }
+            .input-section label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+                color: #555;
+            }
+            .input-section select,
+            .input-section textarea {
+                width: calc(100% - 20px); /* Adjust for padding */
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box; /* Include padding in width calculation */
+            }
+            .input-section button {
+                display: block;
+                width: 100%;
+                padding: 12px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 1.1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+            .input-section button:hover {
+                background-color: #0056b3;
+            }
+            .results-section {
+                margin-top: 40px;
+                border: 1px solid #d4edda; /* Light green border for success */
+                padding: 25px;
+                border-radius: 8px;
+                background-color: #e2f9e7; /* Light green background */
+                display: none; /* Hidden by default, will show with JavaScript */
+            }
+            .results-section h2 {
+                color: #28a745; /* Green for success */
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            #checklistOutput ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            #checklistOutput li {
+                background-color: #f0fff4;
+                margin-bottom: 10px;
+                padding: 12px;
+                border-left: 5px solid #28a745;
+                border-radius: 4px;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            }
+            #checklistOutput li strong {
+                color: #0056b3;
+            }
+        </style>
+
+    </div> </body>
+</html>
