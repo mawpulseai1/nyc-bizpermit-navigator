@@ -145,5 +145,56 @@
             }
         </style>
 
-    </div> </body>
+    </div> 
+
+<script>
+    document.getElementById('getChecklistBtn').addEventListener('click', async () => {
+        const businessType = document.getElementById('businessType').value;
+        const specificDetails = document.getElementById('specificDetails').value;
+        const borough = document.getElementById('borough').value;
+
+        const resultsSection = document.querySelector('.results-section');
+        const checklistOutput = document.getElementById('checklistOutput');
+        const button = document.getElementById('getChecklistBtn');
+
+        // Basic validation
+        if (!specificDetails.trim()) {
+            alert('Please briefly describe your business!');
+            return;
+        }
+
+        // Show loading state
+        button.textContent = 'Generating... Please wait!';
+        button.disabled = true;
+        checklistOutput.innerHTML = '<p>Getting your personalized checklist from Ava...</p>';
+        resultsSection.style.display = 'block'; // Show results section
+
+        try {
+            const response = await fetch('/api/generate-checklist', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ businessType, specificDetails, borough }),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            checklistOutput.innerHTML = data.checklist;
+
+        } catch (error) {
+            console.error('Error:', error);
+            checklistOutput.innerHTML = `<p style="color: red;">Failed to generate checklist: ${error.message}. Please try again.</p>`;
+        } finally {
+            button.textContent = 'Get My Checklist!';
+            button.disabled = false;
+        }
+    });
+</script>
+
+</body>
 </html>
